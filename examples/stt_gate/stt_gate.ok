@@ -1,0 +1,802 @@
+Net pd_one_pin
+Wire length = 0 Path depth = 0
+0 (10 10) neighbor 0 length 0
+Net deg2
+Wire length = 14 Path depth = 14
+0 (0 0) neighbor 1 length 14
+1 (10 4) neighbor 1 length 0
+Net deg3
+Wire length = 19 Path depth = 14
+0 (0 0) neighbor 3 length 9
+1 (10 4) neighbor 3 length 5
+2 (5 9) neighbor 3 length 5
+3 (5 4) neighbor 3 length 0
+Net lut4_0
+Wire length = 541 Path depth = 415
+0 (71 173) neighbor 4 length 162
+1 (324 335) neighbor 5 length 145
+2 (50 383) neighbor 4 length 69
+3 (179 392) neighbor 5 length 57
+4 (71 335) neighbor 5 length 108
+5 (179 335) neighbor 5 length 0
+Net lut4_1
+Wire length = 431 Path depth = 272
+0 (205 28) neighbor 4 length 4
+1 (368 32) neighbor 5 length 82
+2 (143 47) neighbor 4 length 77
+3 (286 219) neighbor 5 length 187
+4 (205 32) neighbor 5 length 81
+5 (286 32) neighbor 5 length 0
+Net lut5_0
+Wire length = 823 Path depth = 448
+0 (162 1) neighbor 5 length 124
+1 (275 12) neighbor 5 length 0
+2 (301 18) neighbor 6 length 26
+3 (11 196) neighbor 7 length 264
+4 (351 345) neighbor 7 length 225
+5 (275 12) neighbor 6 length 6
+6 (275 18) neighbor 7 length 178
+7 (275 196) neighbor 7 length 0
+Net lut5_1
+Wire length = 549 Path depth = 482
+0 (337 12) neighbor 5 length 136
+1 (273 84) neighbor 5 length 0
+2 (255 136) neighbor 6 length 18
+3 (118 275) neighbor 7 length 155
+4 (316 281) neighbor 7 length 49
+5 (273 84) neighbor 6 length 52
+6 (273 136) neighbor 7 length 139
+7 (273 275) neighbor 7 length 0
+Net lut6_0
+Wire length = 539 Path depth = 399
+0 (64 2) neighbor 8 length 40
+1 (166 6) neighbor 7 length 36
+2 (359 42) neighbor 6 length 118
+3 (51 79) neighbor 9 length 0
+4 (241 106) neighbor 6 length 64
+5 (50 132) neighbor 9 length 54
+6 (241 42) neighbor 7 length 75
+7 (166 42) neighbor 8 length 102
+8 (64 42) neighbor 9 length 50
+9 (51 79) neighbor 9 length 0
+Net lut6_1
+Wire length = 694 Path depth = 495
+0 (370 216) neighbor 9 length 222
+1 (130 217) neighbor 7 length 103
+2 (5 290) neighbor 6 length 66
+3 (187 320) neighbor 8 length 0
+4 (252 350) neighbor 9 length 30
+5 (41 382) neighbor 6 length 62
+6 (41 320) neighbor 7 length 89
+7 (130 320) neighbor 8 length 57
+8 (187 320) neighbor 9 length 65
+9 (252 320) neighbor 9 length 0
+Net lut7_0
+Wire length = 951 Path depth = 480
+0 (52 23) neighbor 9 length 71
+1 (260 42) neighbor 7 length 52
+2 (114 94) neighbor 8 length 0
+3 (357 113) neighbor 10 length 42
+4 (34 226) neighbor 9 length 150
+5 (315 383) neighbor 11 length 0
+6 (390 392) neighbor 11 length 84
+7 (260 94) neighbor 8 length 146
+8 (114 94) neighbor 8 length 0
+9 (52 94) neighbor 8 length 62
+10 (315 113) neighbor 7 length 74
+11 (315 383) neighbor 10 length 270
+Net lut7_1
+Wire length = 809 Path depth = 375
+0 (292 25) neighbor 7 length 125
+1 (349 93) neighbor 7 length 0
+2 (112 213) neighbor 9 length 62
+3 (393 243) neighbor 8 length 44
+4 (373 275) neighbor 11 length 24
+5 (94 281) neighbor 9 length 24
+6 (285 386) neighbor 10 length 111
+7 (349 93) neighbor 8 length 150
+8 (349 243) neighbor 11 length 32
+9 (112 275) neighbor 10 length 173
+10 (285 275) neighbor 10 length 0
+11 (349 275) neighbor 10 length 64
+Net lut8_0
+Wire length = 963 Path depth = 504
+0 (92 41) neighbor 8 length 87
+1 (159 61) neighbor 8 length 0
+2 (294 100) neighbor 9 length 0
+3 (368 187) neighbor 10 length 74
+4 (17 291) neighbor 13 length 95
+5 (306 309) neighbor 11 length 12
+6 (94 337) neighbor 13 length 28
+7 (224 393) neighbor 12 length 84
+8 (159 61) neighbor 9 length 174
+9 (294 100) neighbor 10 length 87
+10 (294 187) neighbor 11 length 122
+11 (294 309) neighbor 12 length 70
+12 (224 309) neighbor 12 length 0
+13 (94 309) neighbor 12 length 130
+Net lut8_1
+Wire length = 899 Path depth = 547
+0 (272 78) neighbor 8 length 24
+1 (208 102) neighbor 8 length 64
+2 (394 153) neighbor 9 length 122
+3 (188 204) neighbor 11 length 0
+4 (93 255) neighbor 12 length 0
+5 (40 286) neighbor 13 length 0
+6 (274 368) neighbor 10 length 166
+7 (32 385) neighbor 13 length 107
+8 (272 102) neighbor 9 length 51
+9 (272 153) neighbor 10 length 51
+10 (272 204) neighbor 11 length 84
+11 (188 204) neighbor 12 length 146
+12 (93 255) neighbor 12 length 0
+13 (40 286) neighbor 12 length 84
+Net lut9_0
+Wire length = 758 Path depth = 319
+0 (48 98) neighbor 10 length 109
+1 (281 115) neighbor 9 length 31
+2 (330 146) neighbor 9 length 49
+3 (98 157) neighbor 10 length 0
+4 (157 195) neighbor 12 length 0
+5 (264 201) neighbor 11 length 6
+6 (101 340) neighbor 14 length 0
+7 (174 345) neighbor 15 length 73
+8 (40 354) neighbor 15 length 70
+9 (281 146) neighbor 11 length 66
+10 (98 157) neighbor 13 length 41
+11 (264 195) neighbor 12 length 107
+12 (157 195) neighbor 13 length 56
+13 (101 195) neighbor 14 length 145
+14 (101 340) neighbor 15 length 5
+15 (101 345) neighbor 15 length 0
+Net lut9_1
+Wire length = 1041 Path depth = 697
+0 (233 7) neighbor 9 length 1
+1 (135 8) neighbor 9 length 98
+2 (227 23) neighbor 10 length 6
+3 (308 160) neighbor 11 length 26
+4 (8 173) neighbor 15 length 136
+5 (282 211) neighbor 12 length 0
+6 (359 277) neighbor 13 length 77
+7 (193 321) neighbor 14 length 44
+8 (40 370) neighbor 15 length 93
+9 (233 8) neighbor 10 length 15
+10 (233 23) neighbor 11 length 186
+11 (282 160) neighbor 11 length 0
+12 (282 211) neighbor 11 length 51
+13 (282 277) neighbor 12 length 66
+14 (193 277) neighbor 13 length 89
+15 (40 277) neighbor 14 length 153
+Net med10
+Wire length = 9385 Path depth = 7606
+0 (1944 204) neighbor 10 length 813
+1 (1504 1017) neighbor 10 length 440
+2 (3010 1270) neighbor 12 length 32
+3 (3159 1302) neighbor 11 length 56
+4 (1930 1787) neighbor 14 length 0
+5 (3103 2130) neighbor 15 length 0
+6 (1884 2588) neighbor 16 length 0
+7 (3107 3186) neighbor 15 length 1060
+8 (516 4433) neighbor 17 length 0
+9 (409 4479) neighbor 17 length 153
+10 (1944 1017) neighbor 13 length 285
+11 (3103 1302) neighbor 12 length 93
+12 (3010 1302) neighbor 13 length 1066
+13 (1944 1302) neighbor 14 length 499
+14 (1930 1787) neighbor 16 length 847
+15 (3103 2130) neighbor 11 length 828
+16 (1884 2588) neighbor 17 length 3213
+17 (516 4433) neighbor 17 length 0
+Net med11
+Wire length = 11714 Path depth = 7360
+0 (1928 340) neighbor 11 length 484
+1 (4051 368) neighbor 18 length 456
+2 (2453 824) neighbor 17 length 0
+3 (1636 873) neighbor 12 length 0
+4 (896 1317) neighbor 13 length 541
+5 (4701 1540) neighbor 19 length 435
+6 (4266 1927) neighbor 19 length 387
+7 (1437 2844) neighbor 14 length 0
+8 (2441 3200) neighbor 15 length 1004
+9 (1415 4561) neighbor 16 length 0
+10 (553 4802) neighbor 16 length 1103
+11 (1928 824) neighbor 17 length 525
+12 (1636 873) neighbor 11 length 341
+13 (1437 1317) neighbor 12 length 643
+14 (1437 2844) neighbor 13 length 1527
+15 (1437 3200) neighbor 14 length 356
+16 (1415 4561) neighbor 15 length 1383
+17 (2453 824) neighbor 18 length 1598
+18 (4051 824) neighbor 18 length 0
+19 (4266 1540) neighbor 18 length 931
+Net med12
+Wire length = 12930 Path depth = 8118
+0 (1867 663) neighbor 12 length 365
+1 (3237 1028) neighbor 12 length 1370
+2 (626 1438) neighbor 13 length 0
+3 (298 1514) neighbor 13 length 404
+4 (894 2539) neighbor 15 length 0
+5 (738 2681) neighbor 17 length 156
+6 (4290 3922) neighbor 20 length 783
+7 (72 3977) neighbor 16 length 511
+8 (572 3988) neighbor 16 length 0
+9 (4029 4705) neighbor 19 length 0
+10 (4794 4805) neighbor 20 length 604
+11 (3379 4806) neighbor 21 length 101
+12 (1867 1028) neighbor 14 length 1383
+13 (626 1438) neighbor 14 length 268
+14 (894 1438) neighbor 15 length 1101
+15 (894 2539) neighbor 17 length 142
+16 (572 3988) neighbor 18 length 322
+17 (894 2681) neighbor 17 length 0
+18 (894 3988) neighbor 17 length 1307
+19 (4029 4705) neighbor 21 length 650
+20 (4290 4705) neighbor 19 length 261
+21 (3379 4705) neighbor 18 length 3202
+Net med14
+Wire length = 13812 Path depth = 8746
+0 (2134 667) neighbor 17 length 55
+1 (39 669) neighbor 14 length 1756
+2 (2042 722) neighbor 17 length 92
+3 (3282 750) neighbor 18 length 0
+4 (4393 825) neighbor 19 length 1111
+5 (376 2204) neighbor 14 length 116
+6 (189 2451) neighbor 15 length 71
+7 (4273 2663) neighbor 20 length 991
+8 (260 2859) neighbor 16 length 0
+9 (2954 2943) neighbor 21 length 0
+10 (972 3474) neighbor 23 length 531
+11 (2148 4170) neighbor 24 length 0
+12 (2651 4288) neighbor 25 length 240
+13 (2411 4399) neighbor 25 length 111
+14 (260 2204) neighbor 15 length 247
+15 (260 2451) neighbor 16 length 408
+16 (260 2859) neighbor 23 length 796
+17 (2134 722) neighbor 18 length 1176
+18 (3282 750) neighbor 19 length 75
+19 (3282 825) neighbor 20 length 1838
+20 (3282 2663) neighbor 21 length 608
+21 (2954 2943) neighbor 22 length 806
+22 (2148 2943) neighbor 24 length 1227
+23 (972 2943) neighbor 22 length 1176
+24 (2148 4170) neighbor 24 length 0
+25 (2411 4288) neighbor 24 length 381
+Net med18
+Wire length = 16212 Path depth = 5697
+0 (3934 305) neighbor 24 length 1383
+1 (2923 677) neighbor 24 length 0
+2 (1135 918) neighbor 18 length 1342
+3 (2849 1568) neighbor 25 length 40
+4 (2889 2169) neighbor 26 length 0
+5 (230 2260) neighbor 18 length 905
+6 (1951 2804) neighbor 32 length 0
+7 (3630 2914) neighbor 27 length 0
+8 (3642 3601) neighbor 28 length 0
+9 (1644 3697) neighbor 33 length 0
+10 (1548 3731) neighbor 21 length 0
+11 (1525 3793) neighbor 22 length 0
+12 (3772 3844) neighbor 29 length 0
+13 (4982 4009) neighbor 30 length 604
+14 (783 4224) neighbor 23 length 237
+15 (4378 4405) neighbor 30 length 396
+16 (2728 4436) neighbor 31 length 1471
+17 (1020 4861) neighbor 23 length 637
+18 (1135 2260) neighbor 19 length 1053
+19 (1644 2804) neighbor 32 length 307
+20 (2889 2804) neighbor 32 length 938
+21 (1548 3731) neighbor 33 length 130
+22 (1525 3793) neighbor 21 length 85
+23 (1020 4224) neighbor 22 length 936
+24 (2923 677) neighbor 25 length 925
+25 (2889 1568) neighbor 26 length 601
+26 (2889 2169) neighbor 20 length 635
+27 (3630 2914) neighbor 20 length 851
+28 (3642 3601) neighbor 27 length 699
+29 (3772 3844) neighbor 28 length 373
+30 (4378 4009) neighbor 31 length 606
+31 (3772 4009) neighbor 29 length 165
+32 (1951 2804) neighbor 32 length 0
+33 (1644 3697) neighbor 19 length 893
+Net med25
+Wire length = 21217 Path depth = 10870
+0 (1112 19) neighbor 26 length 506
+1 (57 347) neighbor 47 length 826
+2 (2437 525) neighbor 25 length 0
+3 (705 691) neighbor 27 length 0
+4 (396 1106) neighbor 28 length 281
+5 (1038 1240) neighbor 29 length 361
+6 (3902 1384) neighbor 40 length 584
+7 (677 1413) neighbor 30 length 0
+8 (3098 1685) neighbor 41 length 0
+9 (1850 1686) neighbor 32 length 307
+10 (1653 1796) neighbor 31 length 0
+11 (3623 1889) neighbor 42 length 4
+12 (610 2124) neighbor 33 length 0
+13 (210 2193) neighbor 33 length 469
+14 (1891 2885) neighbor 35 length 238
+15 (3619 2938) neighbor 43 length 0
+16 (3107 3269) neighbor 45 length 11
+17 (4574 3357) neighbor 46 length 0
+18 (1462 3784) neighbor 36 length 12
+19 (1376 4064) neighbor 39 length 98
+20 (1474 4111) neighbor 37 length 0
+21 (439 4643) neighbor 38 length 1035
+22 (4832 4686) neighbor 46 length 1587
+23 (3118 4914) neighbor 45 length 1645
+24 (1526 4946) neighbor 38 length 355
+25 (2437 525) neighbor 26 length 1325
+26 (1112 525) neighbor 47 length 407
+27 (705 691) neighbor 47 length 166
+28 (677 1106) neighbor 27 length 443
+29 (677 1240) neighbor 28 length 134
+30 (677 1413) neighbor 29 length 173
+31 (1653 1796) neighbor 34 length 976
+32 (1653 1796) neighbor 31 length 0
+33 (610 2124) neighbor 34 length 395
+34 (677 1796) neighbor 30 length 383
+35 (1653 2885) neighbor 32 length 1089
+36 (1474 3784) neighbor 35 length 1078
+37 (1474 4111) neighbor 39 length 47
+38 (1474 4643) neighbor 37 length 532
+39 (1474 4064) neighbor 36 length 280
+40 (3619 1685) neighbor 41 length 521
+41 (3098 1685) neighbor 25 length 1821
+42 (3619 1889) neighbor 40 length 204
+43 (3619 2938) neighbor 42 length 1049
+44 (3619 3269) neighbor 43 length 331
+45 (3118 3269) neighbor 44 length 501
+46 (4574 3357) neighbor 44 length 1043
+47 (705 525) neighbor 47 length 0
+Net med36
+Wire length = 22633 Path depth = 7985
+0 (4383 71) neighbor 53 length 757
+1 (2773 81) neighbor 36 length 54
+2 (2843 135) neighbor 36 length 70
+3 (2242 295) neighbor 38 length 115
+4 (1111 410) neighbor 37 length 855
+5 (4003 448) neighbor 53 length 0
+6 (1966 821) neighbor 40 length 0
+7 (3643 831) neighbor 56 length 58
+8 (3196 889) neighbor 69 length 0
+9 (4968 979) neighbor 59 length 648
+10 (3786 1316) neighbor 54 length 217
+11 (4306 1584) neighbor 58 length 0
+12 (1796 1671) neighbor 43 length 0
+13 (4240 1688) neighbor 60 length 0
+14 (4925 1799) neighbor 59 length 215
+15 (1024 1867) neighbor 41 length 165
+16 (1573 1882) neighbor 42 length 0
+17 (546 2029) neighbor 44 length 44
+18 (1057 2073) neighbor 45 length 0
+19 (4215 2145) neighbor 68 length 25
+20 (245 2320) neighbor 44 length 548
+21 (1174 2347) neighbor 46 length 274
+22 (2642 2876) neighbor 52 length 423
+23 (4775 3314) neighbor 62 length 194
+24 (4291 3353) neighbor 61 length 0
+25 (4544 3397) neighbor 64 length 0
+26 (4664 3433) neighbor 62 length 36
+27 (4556 3665) neighbor 65 length 0
+28 (915 3827) neighbor 48 length 42
+29 (2219 3869) neighbor 50 length 0
+30 (848 3904) neighbor 48 length 102
+31 (4407 4018) neighbor 66 length 0
+32 (3578 4056) neighbor 67 length 0
+33 (3575 4607) neighbor 67 length 554
+34 (2777 4640) neighbor 51 length 753
+35 (2024 4833) neighbor 51 length 193
+36 (2773 135) neighbor 39 length 275
+37 (1966 410) neighbor 38 length 276
+38 (2242 410) neighbor 39 length 531
+39 (2773 410) neighbor 69 length 902
+40 (1966 821) neighbor 37 length 411
+41 (1174 1882) neighbor 42 length 399
+42 (1573 1882) neighbor 47 length 223
+43 (1796 1671) neighbor 40 length 1020
+44 (546 2073) neighbor 45 length 511
+45 (1057 2073) neighbor 46 length 117
+46 (1174 2073) neighbor 41 length 191
+47 (1796 1882) neighbor 43 length 211
+48 (915 3869) neighbor 49 length 1109
+49 (2024 3869) neighbor 50 length 195
+50 (2219 3869) neighbor 52 length 993
+51 (2024 4640) neighbor 49 length 771
+52 (2219 2876) neighbor 47 length 1417
+53 (4003 448) neighbor 57 length 441
+54 (4003 1316) neighbor 57 length 427
+55 (4240 1584) neighbor 54 length 505
+56 (3643 889) neighbor 69 length 447
+57 (4003 889) neighbor 56 length 360
+58 (4306 1584) neighbor 55 length 66
+59 (4925 1584) neighbor 58 length 619
+60 (4240 1688) neighbor 55 length 104
+61 (4291 3353) neighbor 68 length 1259
+62 (4664 3397) neighbor 63 length 108
+63 (4556 3397) neighbor 64 length 12
+64 (4544 3397) neighbor 61 length 297
+65 (4556 3665) neighbor 63 length 268
+66 (4407 4018) neighbor 65 length 502
+67 (3578 4056) neighbor 66 length 867
+68 (4240 2145) neighbor 60 length 457
+69 (3196 889) neighbor 69 length 0
+Net collinear_x
+Wire length = 50 Path depth = 50
+0 (5 0) neighbor 6 length 10
+1 (5 10) neighbor 6 length 0
+2 (5 20) neighbor 7 length 0
+3 (5 30) neighbor 8 length 0
+4 (5 40) neighbor 9 length 0
+5 (5 50) neighbor 9 length 10
+6 (5 10) neighbor 7 length 10
+7 (5 20) neighbor 8 length 10
+8 (5 30) neighbor 8 length 0
+9 (5 40) neighbor 8 length 10
+Net collinear_y
+Wire length = 50 Path depth = 50
+0 (0 7) neighbor 6 length 10
+1 (10 7) neighbor 6 length 0
+2 (20 7) neighbor 7 length 0
+3 (30 7) neighbor 8 length 0
+4 (40 7) neighbor 9 length 0
+5 (50 7) neighbor 9 length 10
+6 (10 7) neighbor 7 length 10
+7 (20 7) neighbor 8 length 10
+8 (30 7) neighbor 8 length 0
+9 (40 7) neighbor 8 length 10
+Net grid
+Wire length = 150 Path depth = 70
+0 (0 0) neighbor 16 length 10
+1 (10 0) neighbor 18 length 10
+2 (20 0) neighbor 22 length 10
+3 (30 0) neighbor 23 length 10
+4 (0 10) neighbor 16 length 0
+5 (10 10) neighbor 17 length 0
+6 (20 10) neighbor 22 length 0
+7 (30 10) neighbor 23 length 0
+8 (0 20) neighbor 19 length 10
+9 (10 20) neighbor 20 length 0
+10 (20 20) neighbor 25 length 0
+11 (30 20) neighbor 26 length 10
+12 (0 30) neighbor 28 length 10
+13 (10 30) neighbor 29 length 0
+14 (20 30) neighbor 27 length 0
+15 (30 30) neighbor 26 length 0
+16 (0 10) neighbor 19 length 0
+17 (10 10) neighbor 20 length 10
+18 (10 10) neighbor 17 length 0
+19 (0 10) neighbor 18 length 10
+20 (10 20) neighbor 21 length 0
+21 (10 20) neighbor 28 length 10
+22 (20 10) neighbor 24 length 0
+23 (30 10) neighbor 24 length 10
+24 (20 10) neighbor 25 length 10
+25 (20 20) neighbor 21 length 10
+26 (30 30) neighbor 27 length 10
+27 (20 30) neighbor 29 length 10
+28 (10 30) neighbor 29 length 0
+29 (10 30) neighbor 29 length 0
+Net pd_alpha_0
+Wire length = 550 Path depth = 550
+0 (0 0) neighbor 6 length 110
+1 (100 10) neighbor 6 length 0
+2 (200 20) neighbor 7 length 0
+3 (300 30) neighbor 8 length 0
+4 (400 40) neighbor 9 length 0
+5 (500 50) neighbor 9 length 110
+6 (100 10) neighbor 7 length 110
+7 (200 20) neighbor 8 length 110
+8 (300 30) neighbor 8 length 0
+9 (400 40) neighbor 8 length 110
+Net pd_alpha_02
+Wire length = 550 Path depth = 550
+0 (0 0) neighbor 0 length 0
+1 (100 10) neighbor 0 length 110
+2 (200 20) neighbor 1 length 110
+3 (300 30) neighbor 2 length 110
+4 (400 40) neighbor 3 length 110
+5 (500 50) neighbor 4 length 110
+Net pd_alpha_08
+Wire length = 550 Path depth = 550
+0 (0 0) neighbor 0 length 0
+1 (100 10) neighbor 0 length 110
+2 (200 20) neighbor 1 length 110
+3 (300 30) neighbor 2 length 110
+4 (400 40) neighbor 3 length 110
+5 (500 50) neighbor 4 length 110
+Net pd_alpha_10
+Wire length = 550 Path depth = 550
+0 (0 0) neighbor 0 length 0
+1 (100 10) neighbor 0 length 110
+2 (200 20) neighbor 1 length 110
+3 (300 30) neighbor 2 length 110
+4 (400 40) neighbor 3 length 110
+5 (500 50) neighbor 4 length 110
+Net pd_drvr_0
+Wire length = 315 Path depth = 180
+0 (0 0) neighbor 0 length 0
+1 (90 0) neighbor 0 length 90
+2 (90 90) neighbor 4 length 90
+3 (0 90) neighbor 5 length 45
+4 (45 45) neighbor 5 length 45
+5 (0 45) neighbor 0 length 45
+Net pd_drvr_4
+Wire length = 270 Path depth = 90
+0 (0 0) neighbor 6 length 45
+1 (90 0) neighbor 6 length 45
+2 (90 90) neighbor 5 length 45
+3 (0 90) neighbor 5 length 45
+4 (45 45) neighbor 4 length 0
+5 (45 90) neighbor 4 length 45
+6 (45 0) neighbor 4 length 45
+Net pd_dup_all
+Wire length = 0 Path depth = 0
+0 (10 10) neighbor 0 length 0
+1 (10 10) neighbor 0 length 0
+Net pd_dup_some
+Wire length = 7 Path depth = 6
+0 (123 209) neighbor 1 length 0
+1 (123 209) neighbor 4 length 2
+2 (123 215) neighbor 2 length 0
+3 (122 211) neighbor 4 length 1
+4 (123 211) neighbor 2 length 4
+Net pd_star8
+Wire length = 340 Path depth = 70
+0 (0 0) neighbor 0 length 0
+1 (50 0) neighbor 13 length 50
+2 (-50 0) neighbor 13 length 50
+3 (0 50) neighbor 9 length 15
+4 (0 -50) neighbor 10 length 15
+5 (35 35) neighbor 12 length 35
+6 (-35 35) neighbor 12 length 35
+7 (35 -35) neighbor 11 length 35
+8 (-35 -35) neighbor 11 length 35
+9 (0 35) neighbor 0 length 35
+10 (0 -35) neighbor 0 length 35
+11 (0 -35) neighbor 10 length 0
+12 (0 35) neighbor 9 length 0
+13 (0 0) neighbor 0 length 0
+Net pd_check_fallback
+Wire length = 320 Path depth = 239
+0 (100 49) neighbor 7 length 2
+1 (195 50) neighbor 10 length 43
+2 (83 51) neighbor 7 length 17
+3 (116 55) neighbor 9 length 0
+4 (99 92) neighbor 8 length 38
+5 (172 173) neighbor 11 length 15
+6 (157 199) neighbor 11 length 26
+7 (100 51) neighbor 8 length 4
+8 (100 55) neighbor 9 length 16
+9 (116 55) neighbor 9 length 0
+10 (157 55) neighbor 9 length 41
+11 (157 173) neighbor 10 length 118
+Net pd_fanout_120
+Wire length = 11066 Path depth = 1874
+0 (0 0) neighbor 0 length 0
+1 (37 53) neighbor 123 length 32
+2 (74 106) neighbor 126 length 37
+3 (111 159) neighbor 2 length 90
+4 (148 212) neighbor 3 length 90
+5 (185 265) neighbor 4 length 90
+6 (222 318) neighbor 5 length 90
+7 (259 371) neighbor 6 length 90
+8 (296 424) neighbor 7 length 90
+9 (333 477) neighbor 8 length 90
+10 (370 530) neighbor 9 length 90
+11 (407 583) neighbor 10 length 90
+12 (444 636) neighbor 11 length 90
+13 (481 689) neighbor 12 length 90
+14 (518 742) neighbor 13 length 90
+15 (555 795) neighbor 14 length 90
+16 (592 848) neighbor 15 length 90
+17 (629 901) neighbor 16 length 90
+18 (666 954) neighbor 17 length 90
+19 (703 7) neighbor 130 length 21
+20 (740 60) neighbor 120 length 32
+21 (777 113) neighbor 20 length 90
+22 (814 166) neighbor 21 length 90
+23 (851 219) neighbor 22 length 90
+24 (888 272) neighbor 23 length 90
+25 (925 325) neighbor 24 length 90
+26 (962 378) neighbor 25 length 90
+27 (999 431) neighbor 26 length 90
+28 (36 484) neighbor 124 length 85
+29 (73 537) neighbor 127 length 37
+30 (110 590) neighbor 29 length 90
+31 (147 643) neighbor 30 length 90
+32 (184 696) neighbor 31 length 90
+33 (221 749) neighbor 32 length 90
+34 (258 802) neighbor 33 length 90
+35 (295 855) neighbor 34 length 90
+36 (332 908) neighbor 35 length 90
+37 (369 961) neighbor 36 length 90
+38 (406 14) neighbor 131 length 21
+39 (443 67) neighbor 121 length 32
+40 (480 120) neighbor 39 length 90
+41 (517 173) neighbor 40 length 90
+42 (554 226) neighbor 41 length 90
+43 (591 279) neighbor 42 length 90
+44 (628 332) neighbor 43 length 90
+45 (665 385) neighbor 44 length 90
+46 (702 438) neighbor 45 length 90
+47 (739 491) neighbor 46 length 90
+48 (776 544) neighbor 47 length 90
+49 (813 597) neighbor 48 length 90
+50 (850 650) neighbor 49 length 90
+51 (887 703) neighbor 50 length 90
+52 (924 756) neighbor 51 length 90
+53 (961 809) neighbor 52 length 90
+54 (998 862) neighbor 53 length 90
+55 (35 915) neighbor 125 length 85
+56 (72 968) neighbor 55 length 90
+57 (109 21) neighbor 123 length 72
+58 (146 74) neighbor 122 length 32
+59 (183 127) neighbor 58 length 90
+60 (220 180) neighbor 59 length 90
+61 (257 233) neighbor 60 length 90
+62 (294 286) neighbor 61 length 90
+63 (331 339) neighbor 62 length 90
+64 (368 392) neighbor 63 length 90
+65 (405 445) neighbor 64 length 90
+66 (442 498) neighbor 65 length 90
+67 (479 551) neighbor 66 length 90
+68 (516 604) neighbor 67 length 90
+69 (553 657) neighbor 68 length 90
+70 (590 710) neighbor 69 length 90
+71 (627 763) neighbor 70 length 90
+72 (664 816) neighbor 71 length 90
+73 (701 869) neighbor 72 length 90
+74 (738 922) neighbor 73 length 90
+75 (775 975) neighbor 74 length 90
+76 (812 28) neighbor 120 length 72
+77 (849 81) neighbor 76 length 90
+78 (886 134) neighbor 77 length 90
+79 (923 187) neighbor 78 length 90
+80 (960 240) neighbor 79 length 90
+81 (997 293) neighbor 80 length 90
+82 (34 346) neighbor 132 length 2
+83 (71 399) neighbor 124 length 35
+84 (108 452) neighbor 83 length 90
+85 (145 505) neighbor 84 length 90
+86 (182 558) neighbor 85 length 90
+87 (219 611) neighbor 86 length 90
+88 (256 664) neighbor 87 length 90
+89 (293 717) neighbor 88 length 90
+90 (330 770) neighbor 89 length 90
+91 (367 823) neighbor 90 length 90
+92 (404 876) neighbor 91 length 90
+93 (441 929) neighbor 92 length 90
+94 (478 982) neighbor 93 length 90
+95 (515 35) neighbor 121 length 72
+96 (552 88) neighbor 128 length 53
+97 (589 141) neighbor 96 length 90
+98 (626 194) neighbor 97 length 90
+99 (663 247) neighbor 98 length 90
+100 (700 300) neighbor 99 length 90
+101 (737 353) neighbor 100 length 90
+102 (774 406) neighbor 101 length 90
+103 (811 459) neighbor 102 length 90
+104 (848 512) neighbor 103 length 90
+105 (885 565) neighbor 104 length 90
+106 (922 618) neighbor 105 length 90
+107 (959 671) neighbor 106 length 90
+108 (996 724) neighbor 107 length 90
+109 (33 777) neighbor 133 length 2
+110 (70 830) neighbor 125 length 35
+111 (107 883) neighbor 110 length 90
+112 (144 936) neighbor 111 length 90
+113 (181 989) neighbor 112 length 90
+114 (218 42) neighbor 122 length 72
+115 (255 95) neighbor 129 length 53
+116 (292 148) neighbor 115 length 90
+117 (329 201) neighbor 116 length 90
+118 (366 254) neighbor 117 length 90
+119 (403 307) neighbor 118 length 90
+120 (740 28) neighbor 130 length 37
+121 (443 35) neighbor 131 length 37
+122 (146 42) neighbor 57 length 58
+123 (37 21) neighbor 0 length 58
+124 (36 399) neighbor 132 length 53
+125 (35 830) neighbor 133 length 53
+126 (37 106) neighbor 1 length 53
+127 (36 537) neighbor 28 length 53
+128 (552 35) neighbor 95 length 37
+129 (255 42) neighbor 114 length 37
+130 (703 28) neighbor 128 length 158
+131 (406 35) neighbor 129 length 158
+132 (36 346) neighbor 126 length 241
+133 (35 777) neighbor 127 length 241
+Net gap_deg2_pd
+Wire length = 70 Path depth = 70
+0 (0 0) neighbor 0 length 0
+1 (30 40) neighbor 0 length 70
+Net gap_deg9_pd
+Wire length = 192 Path depth = 104
+0 (0 0) neighbor 0 length 0
+1 (41 3) neighbor 11 length 4
+2 (9 44) neighbor 10 length 37
+3 (53 51) neighbor 8 length 21
+4 (22 7) neighbor 10 length 13
+5 (38 29) neighbor 9 length 22
+6 (60 12) neighbor 11 length 24
+7 (15 58) neighbor 2 length 20
+8 (47 36) neighbor 5 length 16
+9 (38 7) neighbor 4 length 16
+10 (9 7) neighbor 0 length 16
+11 (41 7) neighbor 9 length 3
+Net gap_deg9_flute
+Wire length = 182 Path depth = 125
+0 (0 0) neighbor 10 length 29
+1 (41 3) neighbor 9 length 4
+2 (22 7) neighbor 10 length 0
+3 (60 12) neighbor 11 length 19
+4 (38 29) neighbor 12 length 3
+5 (47 36) neighbor 13 length 6
+6 (9 44) neighbor 15 length 6
+7 (53 51) neighbor 14 length 19
+8 (15 58) neighbor 15 length 14
+9 (41 7) neighbor 11 length 5
+10 (22 7) neighbor 9 length 19
+11 (41 12) neighbor 12 length 17
+12 (41 29) neighbor 13 length 7
+13 (41 36) neighbor 14 length 8
+14 (41 44) neighbor 14 length 0
+15 (15 44) neighbor 14 length 26
+Net pd_reparent_on_equal_weight
+Wire length = 21 Path depth = 19
+0 (54 68) neighbor 0 length 0
+1 (51 54) neighbor 4 length 5
+2 (52 66) neighbor 5 length 2
+3 (55 58) neighbor 5 length 9
+4 (55 55) neighbor 3 length 3
+5 (54 66) neighbor 0 length 2
+Net pd_boost_increase_order
+Wire length = 356 Path depth = 136
+0 (91 101) neighbor 0 length 0
+1 (27 58) neighbor 38 length 2
+2 (20 62) neighbor 18 length 5
+3 (37 70) neighbor 19 length 7
+4 (48 65) neighbor 48 length 3
+5 (62 69) neighbor 0 length 61
+6 (53 59) neighbor 22 length 9
+7 (58 41) neighbor 45 length 5
+8 (68 51) neighbor 36 length 5
+9 (51 49) neighbor 37 length 2
+10 (44 34) neighbor 39 length 3
+11 (30 54) neighbor 38 length 5
+12 (23 54) neighbor 1 length 8
+13 (35 32) neighbor 10 length 11
+14 (23 35) neighbor 43 length 5
+15 (26 30) neighbor 40 length 4
+16 (24 44) neighbor 27 length 14
+17 (29 68) neighbor 48 length 19
+18 (20 67) neighbor 47 length 9
+19 (43 71) neighbor 20 length 5
+20 (48 71) neighbor 42 length 3
+21 (58 66) neighbor 41 length 2
+22 (53 68) neighbor 41 length 5
+23 (63 42) neighbor 36 length 9
+24 (68 46) neighbor 8 length 5
+25 (54 44) neighbor 37 length 6
+26 (47 29) neighbor 39 length 5
+27 (33 49) neighbor 44 length 16
+28 (19 52) neighbor 12 length 6
+29 (39 28) neighbor 26 length 9
+30 (20 40) neighbor 43 length 3
+31 (30 28) neighbor 40 length 2
+32 (19 48) neighbor 28 length 4
+33 (49 40) neighbor 44 length 9
+34 (54 30) neighbor 25 length 14
+35 (64 37) neighbor 45 length 5
+36 (63 51) neighbor 46 length 18
+37 (53 49) neighbor 6 length 10
+38 (29 58) neighbor 47 length 9
+39 (47 34) neighbor 33 length 8
+40 (30 30) neighbor 13 length 7
+41 (58 68) neighbor 46 length 4
+42 (48 68) neighbor 22 length 5
+43 (23 40) neighbor 16 length 5
+44 (49 49) neighbor 9 length 2
+45 (63 41) neighbor 23 length 1
+46 (62 68) neighbor 5 length 1
+47 (29 67) neighbor 17 length 1
+48 (48 68) neighbor 42 length 0

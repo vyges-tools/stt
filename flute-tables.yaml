@@ -1,0 +1,14 @@
+# Where the FLUTE lookup tables come from.
+#
+# POWV9.dat and POST9.dat are precomputed optimal Steiner topologies for degree <= 9, about
+# 9.4 MB. They are DATA, not code, and they are fetched at build time rather than vendored so the
+# provenance is a commit rather than a copy.
+#
+# ⛔ Bump deliberately: the golden in examples/stt_gate/ is captured against this commit, so
+# moving it means recapturing that golden too.
+source: https://github.com/The-OpenROAD-Project/OpenROAD
+commit: da9f29f18b6487825aa880597176e0fa97110b31
+subtree:                          # only this is sparse-checked-out
+  - src/stt/src/flt/etc
+license:
+  spdx: BSD-3-Clause
