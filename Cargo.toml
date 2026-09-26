@@ -1,6 +1,6 @@
 [package]
 name = "vyges-stt"
-version = "0.1.36"
+version = "0.1.37"
 edition = "2021"
 description = "Rectilinear Steiner minimal trees over a net's pin locations: FLUTE and Prim-Dijkstra, with the wirelength/depth trade-off."
 license = "Apache-2.0"
