@@ -20,6 +20,27 @@ use std::process::ExitCode;
 
 use vyges_stt::{check_tree, Branch, Tree};
 
+/// A diagnostic as a structured event (`STT-ERROR`, or `STT-WARNING` for a warning; `vyges-events/1.0`)
+/// instead of a bare stderr line; text after a blank line (the usage) stays plain help.
+fn diag_line(msg: String) {
+    let (head, help) = match msg.split_once("\n\n") {
+        Some((h, rest)) => (h.to_string(), Some(rest.to_string())),
+        None => (msg, None),
+    };
+    let warn = false;
+    let text = head.strip_prefix("vyges-stt: ").or_else(|| head.strip_prefix("stt: ")).unwrap_or(&head).to_string();
+    let (severity, code) = if warn { (vyges_events::Severity::Warn, "STT-WARNING") } else { (vyges_events::Severity::Error, "STT-ERROR") };
+    vyges_events::emit(&vyges_events::Event::new("vyges-stt", severity, text).with_code(code));
+    if let Some(h) = help {
+        eprintln!("{h}");
+    }
+}
+
+macro_rules! diag {
+    ($($t:tt)*) => { diag_line(format!($($t)*)) };
+}
+
+
 const USAGE: &str = "\
 vyges loom stt — rectilinear Steiner minimal trees over a net's pin locations
 
@@ -291,7 +312,7 @@ fn main() -> ExitCode {
                 match args.get(i + 1) {
                     Some(v) => out_path = Some(v.clone()),
                     None => {
-                        eprintln!("vyges-stt: -o needs a FILE");
+                        diag!("vyges-stt: -o needs a FILE");
                         return ExitCode::from(2);
                     }
                 }
@@ -354,20 +375,20 @@ fn main() -> ExitCode {
             };
             let tree = match read_tree(path) {
                 Ok(t) => t,
-                Err(e) => { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                Err(e) => { diag!("stt: {e}"); return ExitCode::from(2); }
             };
             // ⛔ A tree with no branches consulted no rule. Reporting `ok` there would sign off
             // a check that never ran.
             if tree.branch.is_empty() {
                 let text = render_check(json, Status::Vacuous, &tree, &[]);
-                if let Err(e) = emit(out, &text) { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                if let Err(e) = emit(out, &text) { diag!("stt: {e}"); return ExitCode::from(2); }
                 Status::Vacuous
             } else {
                 let ok = check_tree(&tree);
                 let st = if ok { Status::Ok } else { Status::Failed };
                 let lines = tree.print_lines();
                 let text = render_check(json, st, &tree, &lines);
-                if let Err(e) = emit(out, &text) { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                if let Err(e) = emit(out, &text) { diag!("stt: {e}"); return ExitCode::from(2); }
                 st
             }
         }
@@ -378,16 +399,16 @@ fn main() -> ExitCode {
             };
             let (x, y, drvr, alpha) = match read_job(path) {
                 Ok(p) => p,
-                Err(e) => { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                Err(e) => { diag!("stt: {e}"); return ExitCode::from(2); }
             };
             if x.is_empty() {
                 let text = render_run(json, Status::Vacuous, None, "", &[]);
-                if let Err(e) = emit(out, &text) { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                if let Err(e) = emit(out, &text) { diag!("stt: {e}"); return ExitCode::from(2); }
                 Status::Vacuous
             } else {
                 let lut = match load_lut() {
                     Ok(l) => l,
-                    Err(e) => { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                    Err(e) => { diag!("stt: {e}"); return ExitCode::from(2); }
                 };
                 let (tree, why) = vyges_stt::make_steiner_tree(&lut, &x, &y, drvr, alpha);
                 match tree {
@@ -408,7 +429,7 @@ fn main() -> ExitCode {
                             let text =
                                 render_run(json, Status::Ok, Some(&t), builder_name(&why), &lines);
                             if let Err(e) = emit(out, &text) {
-                                eprintln!("stt: {e}");
+                                diag!("stt: {e}");
                                 return ExitCode::from(2);
                             }
                             Status::Ok
@@ -457,11 +478,11 @@ fn main() -> ExitCode {
             };
             let nets = match read_nets(path) {
                 Ok(n) => n,
-                Err(e) => { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                Err(e) => { diag!("stt: {e}"); return ExitCode::from(2); }
             };
             let lut = match load_lut() {
                 Ok(l) => l,
-                Err(e) => { eprintln!("stt: {e}"); return ExitCode::from(2); }
+                Err(e) => { diag!("stt: {e}"); return ExitCode::from(2); }
             };
             let mut text = String::new();
             let mut built = 0usize;
@@ -525,7 +546,7 @@ fn main() -> ExitCode {
                     fallback
                 );
             }
-            if let Err(e) = emit(out, &text) { eprintln!("stt: {e}"); return ExitCode::from(2); }
+            if let Err(e) = emit(out, &text) { diag!("stt: {e}"); return ExitCode::from(2); }
             st
         }
         _ => { eprintln!("{USAGE}"); return ExitCode::from(2); }
