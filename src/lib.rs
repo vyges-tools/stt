@@ -23,6 +23,10 @@
 #![allow(clippy::too_many_arguments)]
 #![allow(non_snake_case)]
 
+// The crate's own name inside it: the command-line entry ([`cli_main`]) is built into the
+// library too, and its `vyges_stt::…` paths resolve here.
+extern crate self as vyges_stt;
+
 pub mod check;
 pub mod events;
 pub mod flute;
@@ -175,3 +179,10 @@ mod facade_tests {
         assert_eq!(t.unwrap().deg, 120);
     }
 }
+
+/// The `vyges-stt` command-line entry (the binary's `main`), built into the library too so a
+/// suite binary can link every engine and run the one it is invoked as.
+#[cfg(feature = "suite")]
+#[doc(hidden)]
+#[path = "main.rs"]
+pub mod cli_main;

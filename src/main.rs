@@ -283,7 +283,7 @@ fn link(flag: &str) -> Option<(&'static str, &'static str)> {
     })
 }
 
-fn main() -> ExitCode {
+pub fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
     let json = args.iter().any(|a| a == "--json");
     // ⛔ Both flags SET SOMETHING. `vyges-events` reads its severity floor from `VYGES_LOG`
