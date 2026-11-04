@@ -178,6 +178,86 @@ mod facade_tests {
         assert_eq!(why, PdOutcome::PrimDijkstra, "deg 120 > 100 never falls back");
         assert_eq!(t.unwrap().deg, 120);
     }
+
+    // ---- Upstream gtests `TestSteinerTreeBuilder.cpp` (4155ac3, 752dba8f84e), ported. ----
+
+    /// Five pins, driver 0: Prim-Dijkstra at 0.3 returns a valid tree longer than FLUTE's.
+    const PD_LONGER: ([i32; 5], [i32; 5]) = ([10, 50, 10, 90, 40], [30, 10, 10, 50, 90]);
+    /// Eleven pins, driver 0: Prim-Dijkstra at 0.3 returns a tree `checkTree` rejects.
+    const PD_REJECTED: ([i32; 11], [i32; 11]) = ([0, 9, 1, 12, 14, 15, 2, 4, 19, 0, 15], [10, 2, 17, 14, 6, 12, 14, 14, 3, 9, 0]);
+
+    fn flute3(x: &[i32], y: &[i32]) -> Tree {
+        flute::flute_acc(&lut(), x, y, 3).expect("flute builds the net")
+    }
+
+    fn branch_length(t: &Tree) -> i64 {
+        t.branch.iter().map(|b| i64::from((b.x - t.branch[b.n].x).abs() + (b.y - t.branch[b.n].y).abs())).sum()
+    }
+
+    // `ZeroAlphaIsFlute`: alpha 0 is FLUTE at accuracy 3, branch for branch.
+    #[test]
+    fn upstream_zero_alpha_is_flute() {
+        let (x, y) = PD_LONGER;
+        assert_eq!(make_steiner_tree(&lut(), &x, &y, 0, 0.0).0.unwrap(), flute3(&x, &y));
+    }
+
+    // `PositiveAlphaIsPrimDijkstra`: a positive alpha whose tree checks out is that tree, and
+    // here it is longer than FLUTE's.
+    #[test]
+    fn upstream_positive_alpha_is_prim_dijkstra() {
+        let (x, y) = PD_LONGER;
+        let pd = pd::prim_dijkstra(&x, &y, 0, 0.3).unwrap();
+        assert!(check_tree(&pd));
+        let t = make_steiner_tree(&lut(), &x, &y, 0, 0.3).0.unwrap();
+        assert_eq!(t, pd);
+        assert!(t.length > flute3(&x, &y).length);
+    }
+
+    // `RejectedPrimDijkstraFallsBackToFlute`.
+    #[test]
+    fn upstream_rejected_prim_dijkstra_falls_back_to_flute() {
+        let (x, y) = PD_REJECTED;
+        assert!(!check_tree(&pd::prim_dijkstra(&x, &y, 0, 0.3).unwrap()));
+        let (t, why) = make_steiner_tree(&lut(), &x, &y, 0, 0.3);
+        assert_eq!(why, PdOutcome::FellBackCheckFailed);
+        let t = t.unwrap();
+        assert_eq!(t, flute3(&x, &y));
+        assert!(check_tree(&t));
+    }
+
+    // `TwoPinNet`: 70 by either builder, and the branches add up to it.
+    #[test]
+    fn upstream_two_pin_net() {
+        for alpha in [0.0, 0.3] {
+            let t = make_steiner_tree(&lut(), &[10, 40], &[20, 60], 0, alpha).0.unwrap();
+            assert_eq!((t.deg, t.length, branch_length(&t)), (2, 70, 70), "alpha {alpha}");
+        }
+    }
+
+    // `NinePinGrid`: degree 9, the largest the lookup table holds; length 80 either way.
+    #[test]
+    fn upstream_nine_pin_grid() {
+        let x: Vec<i32> = (0..3).flat_map(|i| [i * 10; 3]).collect();
+        let y: Vec<i32> = (0..3).flat_map(|_| [0, 10, 20]).collect();
+        for alpha in [0.0, 0.3] {
+            let t = make_steiner_tree(&lut(), &x, &y, 4, alpha).0.unwrap();
+            assert_eq!((t.deg, t.length, branch_length(&t)), (9, 80, 80), "alpha {alpha}");
+            assert!(check_tree(&t));
+        }
+    }
+
+    fn tree(deg: usize, branch: &[(i32, i32, usize)]) -> Tree {
+        Tree { deg, length: 20, branch: branch.iter().map(|&(x, y, n)| Branch { x, y, n }).collect() }
+    }
+
+    // `CheckTreeRejectsCrossingBranches` / `...AcceptsBranchesSharingCorner` / `...SkipsHighFanout`.
+    #[test]
+    fn upstream_check_tree_cases() {
+        let crossing = [(0, 5, 1), (10, 5, 1), (5, 0, 3), (5, 10, 3)];
+        assert!(!check_tree(&tree(4, &crossing)), "(0,5)-(10,5) crosses (5,0)-(5,10)");
+        assert!(check_tree(&tree(3, &[(0, 0, 1), (10, 0, 1), (10, 10, 1)])), "a shared corner is no crossing");
+        assert!(check_tree(&tree(101, &crossing)), "above 100 pins the check is skipped");
+    }
 }
 
 /// The `vyges-stt` command-line entry (the binary's `main`), built into the library too so a

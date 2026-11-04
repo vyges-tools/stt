@@ -7,7 +7,7 @@
 # ⛔ Bump deliberately: the golden in examples/stt_gate/ is captured against this commit, so
 # moving it means recapturing that golden too.
 source: https://github.com/The-OpenROAD-Project/OpenROAD
-commit: 27288f5c90265ae5296b2f5a9fa6e8714fa191ad
+commit: 4155ac31014923e0fa721b691d222511adc7d8c3
 subtree:                          # only this is sparse-checked-out
   - src/stt/src/flt/etc
 license:
