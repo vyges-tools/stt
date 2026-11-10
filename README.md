@@ -1,7 +1,5 @@
 # vyges-stt
 
-**[Download Loom](https://vyges.com/products/vyges-cli/#install)** · install the free [Vyges CLI](https://vyges.com/products/vyges-cli/), then `vyges install loom`
-
 Rectilinear Steiner minimal trees over a net's pin locations.
 
 Two builders behind one entry point: **FLUTE** for minimum wirelength, and **Prim-Dijkstra** when a
